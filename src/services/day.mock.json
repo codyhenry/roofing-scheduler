@@ -1,0 +1,55 @@
+{
+  "_id": {
+    "$oid": "63cee299913380e4d9745f62"
+  },
+  "date": {
+    "$date": {
+      "$numberLong": "1614229200000"
+    }
+  },
+  "cancellations": [
+    ""
+  ],
+  "schedules": [
+    {
+      "am": [
+        {
+          "city": "coral springs",
+          "customer": "abe lincoln",
+          "time": null
+        },
+        {
+          "city": "margate",
+          "customer": "thomas jefferson",
+          "time": null
+        }
+      ],
+      "mid": [
+        ""
+      ],
+      "pm": [
+        ""
+      ]
+    },
+    {
+      "am": [
+        ""
+      ],
+      "mid": [
+        ""
+      ],
+      "pm": [
+        {
+          "city": "weston",
+          "customer": "ben franklin",
+          "time": null
+        },
+        {
+          "city": "weston",
+          "customer": "john adams",
+          "time": null
+        }
+      ]
+    }
+  ]
+}
