@@ -20,10 +20,13 @@ export const ScheduleScreen = () => {
       <button type="button" onClick={() => setCount(count + 1)}>
         Increment
       </button>
-      {dailySchedule.schedules.map((schedule, index) => {
-        return <TimeSlot schedule={schedule} key={`schedule-${index}`} />;
-      })}
-      ;
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        dailySchedule.schedules.map((schedule, index) => {
+          return <TimeSlot schedule={schedule} key={`schedule-${index}`} />;
+        })
+      )}
     </>
   );
 

@@ -5,10 +5,15 @@ export const Row = styled.ul`
   display: table;
   table-layout: fixed;
   border-collapse: collapse;
+  background-color: ${(props) => props.rowColor || "lightgray"};
   margin: 0;
+  overflow: hidden;
   &:not(:last-child) {
     border-width: 0 0 2px 0px;
     border-style: solid;
+  }
+  &:focus-within {
+    background-color: lightblue;
   }
 `;
 

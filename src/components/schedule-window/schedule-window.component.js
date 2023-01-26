@@ -35,16 +35,17 @@ export const TimeSlot = ({ schedule }) => {
       <ScheduleHeader />
       {/* am */}
       {schedule.am.map((time) => {
-        return <ScheduleRow slot={time} time={"9-1"} />;
+        return <ScheduleRow slot={time} timeframe={"9-1"} />;
       })}
       {/* mid */}
       {schedule.mid.map((time) => {
-        return <ScheduleRow slot={time} time={"10-2"} />;
+        return <ScheduleRow slot={time} timeframe={"10-2"} />;
       })}
       {/* pm */}
       {schedule.pm.map((time) => {
-        return <ScheduleRow slot={time} time={"1-4"} />;
+        return <ScheduleRow slot={time} timeframe={"1-4"} />;
       })}
+      <div>Add new row</div>
     </Schedule>
   );
 };

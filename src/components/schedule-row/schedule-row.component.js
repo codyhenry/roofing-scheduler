@@ -1,23 +1,27 @@
 //one row of the schedule
 import { Header, Row, Column } from "./schedule-row.styles";
+import { EditableText, EditableSelect } from "./editable-cell.component";
 import { Spacer } from "../spacer/spacer.component";
 
 export const ScheduleRow = (props) => {
   const slot = props.slot;
-  const timeZone = props.time;
-  console.log(slot);
+  const timeZone = props.timeframe;
   const { customer, city, time } = slot;
   return (
     //time|name|city|edit and drag icons
-    <Row>
+    <Row rowColor={timeZone === "10-2" && "white"}>
       <Column>{timeZone}</Column>
       <Column>
-        {customer}
+        <EditableText value={customer} />
         <Spacer />
         {time || null}
       </Column>
-      <Column>{city}</Column>
-      <Column>EDIT</Column>
+      <Column>
+        <EditableSelect value={city} />
+      </Column>
+      <Column>
+        <EditableText value={time} />
+      </Column>
     </Row>
   );
 };
@@ -25,10 +29,10 @@ export const ScheduleRow = (props) => {
 export const ScheduleHeader = () => {
   return (
     <Header>
-      <Column>Time</Column>
+      <Column></Column>
       <Column>Customer</Column>
       <Column>City</Column>
-      <Column>EDIT</Column>
+      <Column>Notes</Column>
     </Header>
   );
 };
